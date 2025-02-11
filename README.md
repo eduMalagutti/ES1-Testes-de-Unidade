@@ -10,7 +10,7 @@ Foram utilizados testes automatizados para estudar o seu funcionamento.
 ### Funcionalidades Principais:
 1. **Autenticação de Clientes**: Verifica se o cliente consegue se autenticar com sucesso, ou se falha ao tentar com senha errada ou usuário inexistente.
 2. **Cadastro de Clientes**: Permite salvar e consultar clientes no sistema.
-3. **Gerenciamento de Contas**: Permite salvar, consultar contas de clientes.
+3. **Gerenciamento de Contas**: Permite salvar contas de clientes, realizar depósitos e saques.
 
 ## Como Rodar o Projeto
 
