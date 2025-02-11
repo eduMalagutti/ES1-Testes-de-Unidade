@@ -5,8 +5,7 @@ import com.malagutti.es1_unit_tests.repositories.ClienteRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -46,10 +45,10 @@ public class AutenticacaoServiceTest {
 
     @Test
     public void testAutenticarComUsuarioNaoExistente() {
-        when(clienteRepository.findByEmail("usuario@exemplo.com")).thenReturn(null);
+        when(clienteRepository.findByEmail("usuario@exemplo.com")).thenThrow(new RuntimeException("Usuário não encontrado"));
 
-        boolean resultado = autenticacaoService.autenticar("usuario@exemplo.com", "senha123");
-        assertFalse(resultado);
+        RuntimeException exception = assertThrows(RuntimeException.class, () -> autenticacaoService.autenticar("usuario@exemplo.com", "senha123"));
+        assertEquals("Usuário não encontrado", exception.getMessage());
     }
 }
 

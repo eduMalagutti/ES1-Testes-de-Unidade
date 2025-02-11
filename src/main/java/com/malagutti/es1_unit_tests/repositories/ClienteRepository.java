@@ -22,6 +22,7 @@ public class ClienteRepository {
     }
 
     public Cliente findByEmail(String usuario) {
-        return clientes.values().stream().filter(cliente -> cliente.getEmail().equals(usuario)).findFirst().orElse(null);
+        return clientes.values().stream().filter(cliente -> cliente.getEmail().equals(usuario)).findFirst()
+                .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
     }
 }
