@@ -12,22 +12,22 @@ Foram utilizados testes automatizados para estudar o seu funcionamento.
 2. **Cadastro de Clientes**: Permite salvar e consultar clientes no sistema.
 3. **Gerenciamento de Contas**: Permite salvar contas de clientes, realizar depósitos e saques.
 
-## Como Rodar o Projeto
-
-1. Fazer o build do projeto junto com os testes:
-   ```bash
-   mvn clean install
-   ```
-
-2. Executar só os testes com Maven:
-   ```bash
-   mvn test
-   ```
-
 ## Requisitos
 
 - JDK 17 ou superior
-- Maven
+- Apache Maven
+
+## Como Rodar o Projeto
+
+1. Clonar o repositório
+   ```bash
+   git clone https://github.com/eduMalagutti/ES1-Testes-de-Unidade.git
+   ```
+
+2. Fazer o build do projeto junto com os testes:
+   ```bash
+   mvn clean install
+   ```
 
 ## Ferramenta de Teste Utilizada
 
