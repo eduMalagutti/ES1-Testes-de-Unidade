@@ -34,7 +34,7 @@ Foram utilizados testes automatizados para estudar o seu funcionamento.
 - **JUnit 5** para os testes unitários.
 - **Mockito** para simulação de dependências (mocking), como o repositório de clientes e contas.
 
-## Testes Implementados
+## Testes de Unidade Implementados
 
 Foram implementados os seguintes testes de unidade:
 
